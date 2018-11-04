@@ -28,7 +28,8 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'title', title: __('Title')},
                         {field: 'status', title: __('Status'), searchList: {"0":__('Status 0'),"1":__('Status 1')}, formatter: Table.api.formatter.status},
                         {field: 'post_status', title: __('Post_status'), searchList: {"0":__('Post_status 0'),"1":__('Post_status 1'),"2":__('Post_status 2')}, formatter: Table.api.formatter.status},
-                        {field: 'time', title: __('Time'), operate:'RANGE', addclass:'datetimerange'},
+                        {field: 'time', title: __('Time'), operate:'LIKE', addclass:'datetimerange'},
+                        {field: 'update_time', title: __('修改时间'), operate:'LIKE', addclass:'datetimerange'},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
                 ]
